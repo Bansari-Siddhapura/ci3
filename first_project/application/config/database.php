@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => 'root',
-	'database' => 'c3p_project',
+	'database' => 'ci3_prectise',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -97,13 +97,13 @@ $db['default'] = array(
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-	$capsule = new Capsule;
-		$capsule->addConnection([
-		'driver' => in_array($db['default']['dbdriver'], array('mysql', 'mysqli')) ? 'mysql' : $db['default']['dbdriver'],
-		"host" => $db['default']['hostname'],
-		"database" => $db['default']['database'],
-		"username" => $db['default']['username'],
-		"password" => $db['default']['password']
-		]);
-	$capsule->setAsGlobal();
-	$capsule->bootEloquent();
+$capsule = new Capsule;
+$capsule->addConnection([
+	'driver' => in_array($db['default']['dbdriver'], array('mysql', 'mysqli')) ? 'mysql' : $db['default']['dbdriver'],
+	"host" => $db['default']['hostname'],
+	"database" => $db['default']['database'],
+	"username" => $db['default']['username'],
+	"password" => $db['default']['password']
+]);
+$capsule->setAsGlobal();
+$capsule->bootEloquent();

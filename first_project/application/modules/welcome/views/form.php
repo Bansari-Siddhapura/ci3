@@ -13,25 +13,24 @@
         <div class="my-3">
             <h2>Customer Save</h2>
         </div>
-        <?php //dd($edit_row) 
+        <?php  //dd($edit_row[0])  
         ?>
-
         <form action="<?= site_url('welcome/add') ?>" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?php echo $edit_row[0]['id'] ?? '' ?>">
+            <input type="hidden" name="id" value="<?= set_value('id', $edit_row['id'] ?? '') ?>">
             <div class="mb-2">
-                <input type="text" name="company" class="form-control <?= form_error('company') ? 'is-invalid' : '' ?>" placeholder="enter customer name" value="<?= set_value('company', $edit_row[0]['company'] ?? '') ?>">
+                <input type="text" name="company" class="form-control <?= form_error('company') ? 'is-invalid' : '' ?>" placeholder="enter customer name" value="<?= set_value('company', $edit_row['company'] ?? '') ?>">
                 <?= form_error('company') ?>
             </div>
             <div class="mb-2">
-                <input type="text" name="phone" class="form-control <?= form_error('phone') ? 'is-invalid' : '' ?>" placeholder="enter phone number" value="<?= set_value('phone', $edit_row[0]['phone'] ?? '')  ?>">
+                <input type="text" name="phone" class="form-control <?= form_error('phone') ? 'is-invalid' : '' ?>" placeholder="enter phone number" value="<?= set_value('phone', $edit_row['phone'] ?? '')  ?>">
                 <?= form_error('phone') ?>
             </div>
             <div class="mb-2">
-                <input type="text" name="city" class="form-control <?= form_error('city') ? 'is-invalid' : '' ?>" placeholder="enter city" value="<?= set_value('city', $edit_row[0]['city'] ?? '')  ?>">
+                <input type="text" name="city" class="form-control <?= form_error('city') ? 'is-invalid' : '' ?>" placeholder="enter city" value="<?= set_value('city', $edit_row['city'] ?? '')  ?>">
                 <?= form_error('city') ?>
             </div>
             <div class="mb-2">
-                <input type="text" name="state" class="form-control <?= form_error('state') ? 'is-invalid' : '' ?>" placeholder="enter state" value="<?= set_value('state', $edit_row[0]['state'] ?? '')  ?>">
+                <input type="text" name="state" class="form-control <?= form_error('state') ? 'is-invalid' : '' ?>" placeholder="enter state" value="<?= set_value('state', $edit_row['state'] ?? '')  ?>">
                 <?= form_error('state') ?>
             </div>
             <div class="mb-2">

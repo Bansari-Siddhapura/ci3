@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/fonts/fontawesome/css/all.min.css') ?>">
+	<link href="<?= base_url('assets/src/output.css') ?>" rel="stylesheet">
 	<title>Document</title>
 </head>
 
@@ -15,11 +16,16 @@
 			ci3 CRUD
 		</span>
 	</div>
-
+	<h1 class="text-3xl font-bold underline">
+		Hello world!
+	</h1>
 	<div class="container">
 		<div class="d-flex justify-content-end">
 			<a href="<?= site_url('welcome/show_form') ?>" class="btn btn-primary"><i class="fa-solid fa-plus"></i> ADD</a>
 		</div>
+		<h1 class="text-3xl font-bold underline">
+			Hello world!
+		</h1>
 		<table class="table">
 			<thead>
 				<th>Id</th>

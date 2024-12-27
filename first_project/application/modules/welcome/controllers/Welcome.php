@@ -16,14 +16,15 @@ class Welcome extends MY_Controller
 	{
 		//dd(collectCollection($_SERVER));
 		// $data['customer_name'] = $this->customers_model->getCustomerNames();
-		// $data['customers'] = $this->customers_model->get_all_data();
-		$data['customers'] = Clients_model::all()->toArray();
+		$data['customers'] = $this->customers_model->get_all_data();
+		//$data['customers'] = Clients_model::all()->toArray();
 		//dd($data);
 		$this->load->view('welcome_message', $data);
 	}
 
 	public function show_form($id = null)
 	{
+		//dd($id);
 		if ($id != null) {
 			$data['edit_row'] = $this->customers_model->show_form($id);
 			$this->load->view('form', $data);
